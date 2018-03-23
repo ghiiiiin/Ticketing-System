@@ -4,9 +4,9 @@ nilaai += 2
 print(nilaai)
 nilaii = 2
 print(nilaai//nilaii)
-a=c=10
-print (a,c)
-e,f,g = "ghina",21, 1
+# a=c=10
+# print (a,c)
+# e,f,g = "ghina",21, 1
 print(e,f,g)
 #hallo ksalsklakslkslakslakslaklsalsklaslaklsalsklakslkalsk
 s=10
