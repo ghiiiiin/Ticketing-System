@@ -6,9 +6,9 @@ def prime(bil):
             count+=1
     if(count==2):
         return"prime"
-    else:
-        return"false"
-    # if(bil>1):
+    # else:
+    #     return"false"
+    # # if(bil>1):
             # print("bukan")
             # else:
             #     print("prima")
