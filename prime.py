@@ -20,3 +20,4 @@ def prime(bil):
 
 tes=prime(2)
 print(tes)
+#haloo
