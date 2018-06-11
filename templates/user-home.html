@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Dashboard"/>
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina"/>
+    <link rel="icon" href="icon1.png" type="image/png" sizes="20x20"/> 
+
+    <title>Service Your Problem</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/js/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/style-responsive.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>User ServiceYP</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 5 new messages</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Dashboard.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/halamanlogin">Logout</a></li>
+              </ul>
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/user-create-ticket.html">Create Issue</a></li>
+              </ul>
+
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!--main content start-->
+<section >
+          <section class="wrapper" >
+            <h3><i class="fa fa-angle-right"></i>Your Ticket</h3>
+            <h4>User</h4>
+
+              <!-- page start-->
+              <div class="row mt" >
+                <aside class="col-lg-12 mt">
+                      <section class="panel">
+                        <div class="table-responsive">
+                          <div class="card-body" >
+                                <table id="myTable1" class="table table-bordered table-striped">
+                                      <thead>
+                                          <tr>
+                                              <th>No Ticket</th> 
+                                              <th>Issue Type</th>
+                                              <th>Summary</th>
+                                              <th>Description</th>
+                                              <th>Status</th>
+                                              <th>Request Time</th>
+                                              <th>Action</th>      
+                                          </tr>
+                                      </thead>   
+                                        <tr th:each="Ticket,iterStat:${listticket}">
+                                      <td th:text="${Ticket.id}"></td>  
+                                    <td th:text="${Ticket.TopicTicket.topicName}"></td>
+                                      <td th:text="${Ticket.summary}"></td>
+                                      <td th:text=${Ticket.description}></td>
+                                      <td th:text="${Ticket.status}"></td>
+                                      <td th:text=${Ticket.requesttime}></td>
+                                      <td><a class="btn btn-primary" type="button" th:href="@{user-home(id=${Ticket.id})}">View</a></td>
+                                  </tr>
+                                  </table>
+                            </div>
+                          </div>
+                      </section>
+                  </aside>
+                  </center>
+                  
+              </div>
+
+    </section>
+    </section>
+  </section>
+
+</section>
+
+                 
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+  <script>
+  $(function () {
+    $('#myTable1').DataTable()
+    $('#myTable2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+
+  
+  <script>
+      //custom select box
+
+      $(function(){
+          $("select.styled").customSelect();
+      });
+
+  </script>
+
+  </body>
+</html>

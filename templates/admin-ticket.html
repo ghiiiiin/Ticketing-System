@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Dashboard"/>
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina"/>
+    <link rel="icon" href="icon1.png" type="image/png" sizes="20x20"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <title>Service Your Problem</title>
+ 	
+ 	<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="dt/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/js/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/style-responsive.css" rel="stylesheet"/>
+
+
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Admin ServiceYP</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 5 new messages</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Dashboard.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/halamanlogin">Logout</a></li>
+              </ul>
+            </div>
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="user-home.html" target="_blank">User</a></li>
+              </ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+                  <p class="centered"><img src="icon1.png" class="img-circle" width="60"></p>
+                  <h5 class="centered">Ghina Assyifa K</h5>
+                    
+                  <li class="mt">
+                      <a href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Account</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="admin-list-user.html">User</a></li>
+                          <li><a  href="admin-list-agent.html">Agent</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Ticket</span>
+                      </a>
+                      <ul class="sub">
+                          <li  class="active"><a  href="admin-ticket.html">List Ticket</a></li>
+                          <li><a  href="admin-schedule.html">Schedule</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content" >
+          <section class="wrapper" >
+            <h3><i class="fa fa-angle-right"></i> Ticket</h3>
+              <!-- page start-->
+              <div class="row mt">
+                <aside class="col-lg-11 mt">
+
+                      <section class="panel">
+                          <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="Table">
+                                      <thead>
+                                        <tr>
+                                       	  <th>ID</th>
+                                          <th>Issue Type</th>
+                                          <th>Summary</th>
+                                          <th>Urgency</th>
+                                          <th>User</th>
+                                          <th>Action</th>
+                                          <th>Agent</th>
+                                          <th>Request Time</th>
+                                          <th>#</th>
+                                        </tr>
+                                      </thead>
+                                    </table>
+                                </div>
+                            </div>
+                      </section>
+                  </aside>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Detail Ticket</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form method="post" action="" class="form-horizontal">
+                            <div class="form-group">
+                              
+                              <div class="col-md-4">  
+                              Urgency
+                              <select class="form-control">
+                              <option value="Request">Critical</option>
+                              <option value="Request">High</option>
+                              <option value="Request">Medium</option>
+                              <option value="Request">Low</option>
+                              </select>
+                              </div>
+                              <div class="col-md-4">  
+                              Action
+                              <select class="form-control">
+                              <option value="Request">Open</option>
+                              <option value="Request">On Progress</option>
+                              <option value="Request">Resolved</option>
+                              <option value="Request">Closed</option>
+                              </select>
+                              </div>
+                              <div class="col-md-4">  
+                              Agent
+                              <select class="form-control">
+                              <option value="Request">HR-1</option>
+                              <option value="Request">HR-2</option>
+                              <option value="Request">HR-3</option>
+                              <option value="Request">HR-4</option>
+                              </select>
+                              </div>                              
+                            </div>  
+                            <div class="form-group">
+                              <div class="col-md-6">
+                                <table>
+                                <tr>
+                                  <td>Topic</td>
+                                  <td>:</td>
+                                  <td>Makan</td>
+                                </tr>
+                                <tr>
+                                  <td>Summary</td>
+                                  <td>:</td>
+                                  <td>Makan</td>
+                                </tr>
+                                <tr>
+                                  <td>Description</td>
+                                  <td>:</td>
+                                  <td>Makan</td>
+                                </tr>
+                                <tr>
+                                  <td>Request Time</td>
+                                  <td>:</td>
+                                  <td>Makan</td>
+                                </tr>
+                                <tr>
+                                  <td>Schedule</td>
+                                  <td>:</td>
+                                  <td><textarea type="text" name="schedule"></textarea></td>
+                                </tr>
+                                <tr>
+                                  <td>Follow UP</td>
+                                  <td>:</td>
+                                  <td>Makan</td>
+                                </tr>
+                              </table>
+                              </div>
+                            </div>
+
+                          </form>  
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+  
+              </div>
+              <!-- page end-->
+    </section>
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+
+
+       <script>
+          $(document).ready(function(){
+              $('#Table').DataTable({
+
+                "sAjaxSource": "/listticket",
+                "sAjaxDataProp": "",
+                "aoColumns":[
+                  {"mData":"id"},
+                  {"mData":"topicTicket.topicName"},
+                  {"mData":"summary"},
+                  {"mData":"urgencyTicket.urgencyName"},
+                  {"mData":"employee.employeeName"},
+                  {"mData":"ticketStatus.statusName"},
+                  {"mData":"agent.agentName"},
+                  {"mData":"requesttime"},
+                  {"data": "id",
+                      "render": function(data, type, row, meta){
+                          if(type === 'display'){
+                              data = '<a href= admin-view?id='+ data +'>' + "update" + '</a>';
+                          }
+                          
+                          return data;
+                       }}
+                ]
+              })
+              
+          });
+       </script>
+       
+
+  </section>
+
+                 
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+  
+  <script>
+      //custom select box
+
+      $(function(){
+          $("select.styled").customSelect();
+      });
+
+  </script>
+  </body>
+</html>

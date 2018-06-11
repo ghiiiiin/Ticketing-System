@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+	<body>
+		<center>
+	        <h1>Urgency Ticket</h1>
+	        <table>
+	            <tr>
+	                <th>ID</th>
+	                <th>Name</th>
+	                <th colspan="2">Action</th>
+	            </tr>
+	            <tr th:each="lp,iterStat:${listurgencyticket}">
+	                <td th:text=${lp.id}></td>
+	                <td th:text=${lp.urgencyName}></td>
+	            </tr>
+	        </table>
+	        <a href="/">Back</a>
+    	</center>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="/insertticket">
+            Summary : <input type="text" name="summary"/><br/>
+            Urgency : 
+            <select name="urgencyticketid">
+                <option th:each="lp:${listurgencyticket}" 
+                 th:value="${lp.id}"
+	             th:text="${lp.urgencyName}"></option>
+            </select>
+            <button type="submit">Save</button>
+     </form>
+</body>
+</html>
