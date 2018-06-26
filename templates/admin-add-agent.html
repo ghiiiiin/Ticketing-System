@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://thymeleaf.org">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -51,7 +51,7 @@
                 <ul class="nav top-menu">
                     <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index-admin.html#">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-theme">5</span>
                         </a>
@@ -122,7 +122,7 @@
                     <li><a class="logout" href="/halamanlogin">Logout</a></li>
               </ul>
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="user-home.html" target="_blank">User</a></li>
+                    <li><a class="logout" href="userhome.html" target="_blank">User</a></li>
               </ul>
 
             </div>
@@ -142,7 +142,7 @@
                   <h5 class="centered">Ghina Assyifa K</h5>
                     
                   <li class="mt">
-                      <a href="index.html">
+                      <a href="index-admin.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -165,7 +165,8 @@
                           <span>Ticket</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="admin-ticket.html">List Ticket</a></li>
+                          <li><a  href="admin-ticket.html">All Ticket</a></li>
+                          <li><a  href="admin-ticket-closed.html">Closed Ticket</a></li>
                           <li><a  href="admin-schedule.html">Schedule</a></li>
                       </ul>
                   </li>
@@ -180,53 +181,177 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
-<section id="main-content" >
-          <section class="wrapper" >
+      <section id="main-content">
+          <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i> Add Agent</h3>
+            
+            <!-- BASIC FORM ELELEMNTS -->
+            <div class="row mt">
+              <div class="col-lg-12">
+                  <div class="form-panel">
+                      <h4 class="mb"><i class="fa fa-angle-right"></i> Form Add Agent</h4>
+                      <form class="form-horizontal style-form" method="post" action="admin-add-agent.html">
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Name </label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name ="employeeName" placeholder="insert employee name" required/>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Position </label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="position" placeholder="insert employee position" required/>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Email</label>
+                              <div class="col-sm-10">
+                                  <input id="email" type="email"  class="form-control" name="email" placeholder="insert email" required/>
+                              	  <span id="validateEmail" class="confirmMessage"></span>
+                              </div>
+                          </div>  
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Password</label>
+                              <div class="col-sm-10">
+                                  <input type="password" placeholder="insert password" id="myInput" name="password" pattern=".{6,6}" title="six (6) character" class="form-control ng-invalid ng-invalid-required ng-touched" required/>
+                                  <input type="checkbox" onclick="myFunction()"/> Show Password
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Repassword</label>
+                              <div class="col-sm-10">
+                                  <input type="password" name="repassword" placeholder="insert repassword" id="myInput1" onkeyup="checkPass1(); return false;" class="form-control ng-invalid ng-invalid-required ng-touched" required/>
+                                  <input type="checkbox" onclick="myyFunction()"/> Show Password
+                                  <span id="confirmMessage" class="confirmMessage"></span> 
+                                  
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Priority Status </label>
+                              <div class="col-sm-10">
+                                 <select class="form-control" name="priorityStatus">
+                                   <option th:each= "priority :${listPriority}" th:value="${priority.id}" th:text="${priority.priorityName}"></option>
+                                </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Agent Name </label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="agentName" placeholder="insert agent name" required/>
+                              </div>
+                          </div>
+                          <div class="form-group" >
+                            <label class="col-sm-4 col-sm-4 control-label"></label>
+                              <button type="submit" class="col-md-2 ada" >Add</button>
+                              <button type="submit" class="col-md-2 ada" >Cancel</button>
+                          </div>
+                          
+                      </form>
+                  </div>
+              </div>  
+            </div>
 
-              <!-- page start-->
-              <div class="row mt">
-                <center>
-                <aside class="col-lg-10 mt">
-                      <section class="panel">
-                          <div class="card-body">
-                                <form method="post" action="/admin-list-agent.html">
-                                <div>
-                                        <label>Account ID</label>
-                                          <div class="col-md-12"> 
-                                              <input type="text" name="accountid" ></div>   
-                                          </div>
-                                          <div><br/>
-                                            <label class="label-create">Agent Name</label>
-                                              <div class="col-md-12">
-                                                <input type="text" name="agentName" ></div>  
-                                          </div>
-                                      <div> 
-                                        <center>
-                                        <button type="submit" class="ada" >Add Agent</button>
-                                        </center>
-                                      </div>    
-                                      </form>
-
-                            </div>
-                      </section>
-                  </aside>
-                  </center>
-              </div>
 
     </section>
-    </section>
+  </section>
   </section>
 
-  </section>
+<!-- Ajax isEmailExist -->
+  <script> 
+	  jQuery(document).ready(function($) { 
+	   $("#email").change(function(){ 
+	    $.get("/API/isEmailExist?email="+$(this).val(),function(hasil){ 
+	     if (!hasil){ 
+	      $("#validateEmail").text("email is available!"); 
+	     }else{ 
+	      $("#validateEmail").text("email has been used!"); 
+	     } 
+	    }); 
+	   });
+	  });
+  </script>
 
-                 
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+
+<!-- Ajax Check pass and re-pass -->
+  <script> 
+    function checkPass1(){ 
+        //Store the password field objects into variables ... 
+        var myInput = document.getElementById('myInput'); 
+        var myInput1 = document.getElementById('myInput1'); 
+        //Store the Confimation Message Object ... 
+        var message = document.getElementById('confirmMessage'); 
+        //Set the colors we will be using ... 
+        var goodColor = "#66cc66"; 
+        var badColor = "#ff6666"; 
+        //Compare the values in the password field  
+        //and the confirmation field 
+        if(myInput.value == myInput1.value){ 
+            //The passwords match.  
+            //Set the color to the good color and inform 
+            //the user that they have entered the correct password  
+            myInput1.style.backgroundColor = goodColor; 
+            message.style.color = goodColor; 
+            message.innerHTML = "correct !" 
+        }else{ 
+            //The passwords do not match. 
+            //Set the color to the bad color and 
+            //notify the user. 
+            myInput1.style.backgroundColor = badColor; 
+            message.style.color = badColor; 
+            message.innerHTML = "wrong password!" 
+        } 
+    } 
+    </script>
+
+
+<!-- Ajax Show Pass -->
+  <script>
+  function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+          x.type = "text";
+      } else {
+          x.type = "password";
+      }
+  }
+  </script>
+
+<!-- Ajax Show Re-Pass -->
+  <script>
+  function myyFunction() {
+      var x = document.getElementById("myInput1");
+      if (x.type === "password") {
+          x.type = "text";
+      } else {
+          x.type = "password";
+      }
+  }
+  </script>
+
+  <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="assets/js/jquery.scrollTo.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.sparkline.js"></script>
   
+  <!--common script for all pages-->
+  <script src="assets/js/common-scripts.js"></script>
+    
+  <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <!--custom tagsinput-->
+  <script src="assets/js/jquery.tagsinput.js"></script>
+
+  <!--custom switch-->
+  <script src="assets/js/bootstrap-switch.js"></script>
+  <!--custom checkbox & radio-->
+  
+  <script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+  
+  <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  
+  
+  <script src="assets/js/form-component.js"></script>    
   
   <script>
       //custom select box
